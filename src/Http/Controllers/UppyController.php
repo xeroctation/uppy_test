@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Author:  Arabic Dev
+ * Author:  Xeroctation
  */
 
-namespace Teamprodev\Uppy\Http\Controllers;
+namespace Xeroctation\Uppy\Http\Controllers;
 
 use App\Models\Application;
 

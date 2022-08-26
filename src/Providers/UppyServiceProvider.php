@@ -1,6 +1,6 @@
 <?php
 
-namespace Teamprodev\Uppy\Providers;
+namespace Xeroctation\Uppy\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
