@@ -1,0 +1,24 @@
+{
+  "name": "xeroctation/laravel_uppy",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "xeroctation",
+      "email": "umidakosimova.uk@gmail.com"
+    }
+  ],
+  "require": {},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Xeroctation\\Uppy\\Providers\\UppyServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Xeroctation\\Uppy\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}

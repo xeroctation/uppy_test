@@ -1,1 +1,1 @@
-# uppy_test
+# laravel_uppy
