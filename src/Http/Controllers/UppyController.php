@@ -6,16 +6,16 @@
 
 namespace Xeroctation\Uppy\Http\Controllers;
 
-use App\Models\Application;
+use App\Models\Uppy;
 
 class UppyController
 {
-    public function uploadImage(Request $request,Application $application)
+    public function uploadImage(Request $request,Uppy $uppy)
     {
-        $file_basis = json_decode($application->file_basis);
-        $file_tech_spec = json_decode($application->file_tech_spec);
-        $other_files = json_decode($application->other_files);
-        $performer_file = json_decode($application->performer_file);
+        $file_basis = json_decode($uppy->file_basis);
+        $file_tech_spec = json_decode($uppy->file_tech_spec);
+        $other_files = json_decode($uppy->other_files);
+        $performer_file = json_decode($uppy->performer_file);
         $upload_to = config('uppy.upload_file');
         if ($request->hasFile('file_basis')) {
             $fileName = time() . '_' . $request->file_basis->getClientOriginalName();
@@ -46,10 +46,10 @@ class UppyController
             $performer_file[] = $fileName;
         }
 
-        $application->file_basis = json_encode($file_basis);
-        $application->performer_file = json_encode($performer_file);
-        $application->file_tech_spec = json_encode($file_tech_spec);
-        $application->other_files = json_encode($other_files);
-        $application->update();
+        $uppy->file_basis = json_encode($file_basis);
+        $uppy->performer_file = json_encode($performer_file);
+        $uppy->file_tech_spec = json_encode($file_tech_spec);
+        $uppy->other_files = json_encode($other_files);
+        $uppy->update();
     }
 }
